@@ -5,7 +5,6 @@ class EmbeddingEngine:
     def __init__(self, model_name: str = 'all-MiniLM-L6-v2'):
         """
         Initializes the local transformer model.
-        Targeting FAANG-level efficiency: small footprint, high throughput.
         """
         print(f"Loading model: {model_name}...")
         self.model = SentenceTransformer(model_name)

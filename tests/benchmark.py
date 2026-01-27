@@ -29,8 +29,8 @@ def run_benchmark():
     df = pd.DataFrame(results)
     
     # Calculate Stats
-    avg_hit = df[df['status'] == 'HIT']['Latency_ms'].mean()
-    avg_miss = df[df['status'] == 'MISS']['Latency_ms'].mean()
+    avg_hit = df[df['Status'] == 'HIT']['Latency_ms'].mean()
+    avg_miss = df[df['Status'] == 'MISS']['Latency_ms'].mean()
     
     print("\n--- Results Summary ---")
     print(df)
