@@ -40,7 +40,7 @@ Benchmarked on local hardware using a test suite of semantic variations:
 ## Installation and Usage
 
 1. Clone the repository:
-   git clone [https://github.com/your-username/dyna-cache.git](https://github.com/S-atvikSingh/dyna-cache.git)
+   git clone [https://github.com/S-atvikSingh/dyna-cache.git](https://github.com/S-atvikSingh/dyna-cache.git)
 
 2. Install dependencies:
    pip install -r requirements.txt
