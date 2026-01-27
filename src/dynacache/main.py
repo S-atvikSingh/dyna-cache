@@ -6,6 +6,12 @@ class DynaCache:
     def __init__(self, threshold=0.35):
         self.engine = EmbeddingEngine()
         self.store = VectorStore()
+        # Attempt to load existing cache
+        if self.store.load():
+            print("Successfully restored cache from local storage.")
+        else:
+            print("No existing cache found. Starting fresh.")
+        
         self.threshold = threshold
 
     def query(self, user_query: str):
