@@ -60,5 +60,5 @@ async def get_stats(cache: Annotated[DynaCache, Depends(get_cache_service)]):
         "total_requests": total_requests,
         "hit_rate": f"{hit_rate:.2f}%",
         "estimated_time_saved_sec": f"{ms_saved / 1000:.2f}s",
-        "estimated_cost_saved_usd": f"${(hits * 0.02):.4f}" # Assuming $0.02 per LLM call
+        "estimated_cost_saved_usd": f"${(hits * 0.002):.4f}" # Assuming $0.002 per LLM call
     }

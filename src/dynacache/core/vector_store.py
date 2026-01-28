@@ -12,8 +12,9 @@ class VectorStore:
         
         # 2. Connect to Redis for metadata
         # decode_responses=True automatically converts bytes to strings
+        redis_host = os.getenv("REDIS_HOST", "localhost")
         self.redis_client = redis.Redis(
-            host='localhost', 
+            host=redis_host, 
             port=6379, 
             db=0, 
             decode_responses=True

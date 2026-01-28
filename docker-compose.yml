@@ -1,0 +1,19 @@
+services:
+  # The Redis Database
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    restart: always
+
+  # Our Dyna-Cache API
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOST=redis # Connect to the redis service above
+    volumes:
+      - ./config:/app/config # Persist the FAISS index on your host machine
